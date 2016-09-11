@@ -6,11 +6,19 @@
  * Time: 11:57
  */
 
-require_once "../../vendor/phpmailer/phpmailer/PHPMailerAutoload.php";
+namespace Bsv;
+
+use PHPMailer;
 
 class Email {
 
     protected $mailer;
+
+    public $error;
+
+    const sisEmail = 'bsvsolucoes@gmail.com';
+    const sisNome  = 'BSV Soluções';
+    const sisPass  = '!@#$5678';
 
     /**
      * Email constructor.
@@ -22,13 +30,14 @@ class Email {
         $this->mailer = new PHPMailer();
 
         $this->mailer->isSMTP();
-        $this->mailer->Host = '';
+        $this->mailer->Host = 'smtp.gmail.com';
         $this->mailer->SMTPAuth = true;
-        $this->mailer->Username = !empty($user) ? $user : '';
-        $this->mailer->Password = !empty($pass) ? $pass : '';
-        $this->mailer->SMTPSecure = '!tls';
+        $this->mailer->Username = !empty($user) ? $user : self::sisEmail;
+        $this->mailer->Password = !empty($pass) ? $pass : self::sisPass;
+        $this->mailer->SMTPSecure = 'tls';
         $this->mailer->Port = 587;
         $this->setFormato();
+        $this->setEmailFrom();
     }
 
     /**
@@ -48,5 +57,48 @@ class Email {
      */
     public function addAnexo($arquivo){
         $this->mailer->addAttachment($arquivo);
+    }
+
+    /**
+     * Adiciona o email que irá enviar o email.
+     *
+     * @param string $email
+     * @param string $nome
+     */
+    public function setEmailFrom($email = self::sisEmail, $nome = self::sisNome){
+        $this->mailer->setFrom($email, $nome);
+    }
+
+    /**
+     * Adiciona os emails que irão receber o email enviado.
+     *
+     * @param array $emails - array(<Nome> => <Email>)
+     */
+    public function addEmailTo($emails = array()){
+        if(is_array($emails) && count($emails) > 0){
+            foreach ($emails as $nome => $email) {
+                $this->mailer->addAddress($email, $nome);
+            }
+        }
+    }
+
+    /**
+     * Envia o email.
+     *
+     * @param $assunto
+     * @param $corpo
+     * @return bool
+     * @throws phpmailerException
+     */
+    public function send($assunto, $corpo){
+        $this->mailer->Subject = $assunto;
+        $this->mailer->Body = $corpo;
+
+        if(!$this->mailer->send()){
+            $this->error = $this->mailer->ErrorInfo;
+            return false;
+        } else {
+            return true;
+        }
     }
 }

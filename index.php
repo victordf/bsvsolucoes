@@ -11,11 +11,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
-
+use Bsv\Email;
 
 require_once 'vendor/autoload.php';
+require_once 'app/class/Email.class.php';
 
 $app = new Application();
+$email = new Email();
 
 $app['debug'] = true;
 
@@ -38,6 +40,18 @@ $app['twig']->addGlobal('RAIZ', '/bsvsolucoes/');
 
 $app->get('/', function() use($app){
     return $app['twig']->render('pages/home.twig');
+});
+
+$app->get('email', function() use($app, $email){
+    $email->addEmailTo(array('Victor Martins' => 'victormachado90@gmail.com'));
+    $assunto = 'Teste de email';
+    $corpo = 'Bora ver se vai';
+
+    if(!$email->send($assunto, $corpo)){
+        return $email->error;
+    } else {
+        return 'FOI CARAI!';
+    }
 });
 
 $app->run();
