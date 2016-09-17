@@ -37,6 +37,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 ));
 
 $app['twig']->addGlobal('RAIZ', '/bsvsolucoes/');
+$app['twig']->addGlobal('SLOGAN', 'Um mundo de soluções a seu favor!');
 
 $app->get('/', function() use($app){
     return $app['twig']->render('pages/home.twig');

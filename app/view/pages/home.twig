@@ -6,6 +6,10 @@
             height: 46px;
             width: 160px;
         }
+
+        .carousel-caption div{
+            color: #FFA400 !important;
+        }
     </style>
 {% endblock %}
 
@@ -22,13 +26,11 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="scroll active"><a href="#navigation">Home</a></li>
-                        <li class="scroll"><a href="#about-us">About Us</a></li>
-                        <li class="scroll"><a href="#services">Services</a></li>
-                        <li class="scroll"><a href="#our-team">Our Team</a></li>
-                        <li class="scroll"><a href="#portfolio">Portfolio</a></li>
-                        <li class="scroll"><a href="#clients">Clients</a></li>
-                        <li class="scroll"><a href="#blog">Blog</a></li>
-                        <li class="scroll"><a href="#contact">Contact</a></li>
+                        <li class="scroll"><a href="#about-us">Quem somos</a></li>
+                        <li class="scroll"><a href="#services">Serviços</a></li>
+                        <li class="scroll"><a href="#portfolio">Portifolios</a></li>
+                        <li class="scroll"><a href="#clients">Clientes</a></li>
+                        <li class="scroll"><a href="#contact">Contato</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,9 +49,9 @@
                 <div class="item active" style="background-image: url({{ RAIZ }}web/images/slider/mountains2.jpg)">
                     <div class="carousel-caption">
                         <div>
-                            <h2 class="heading animated bounceInDown">'Himu' Onepage HTML Template</h2>
-                            <p class="animated bounceInUp">Fully Professional one page template</p>
-                            <a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a>
+                            <h2 class="heading animated bounceInDown ">BSV Soluções</h2>
+                            <p class="animated bounceInUp">{{ SLOGAN }}</p>
+                            {#<a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a>#}
                         </div>
                     </div>
                 </div>
@@ -79,8 +81,10 @@
         <div class="container">
             <div class="text-center">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <h2 class="title-one">Por que nós?</h2>
-                    <p>Porque somos fodões :D</p>
+                    <h2 class="title-one">Quem somos?</h2>
+                    <p>
+                        Somos uma empresa jovem, que busca inovar o mercado de sites. Preocupados com a qualidade de vida, de produtos e serviços.
+                    </p>
                 </div>
             </div>
             <div class="about-us">
@@ -193,147 +197,6 @@
             </div>
         </div>
     </section><!--/#service-->
-
-    <section id="our-team">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <h2 class="title-one">Meet The Team</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
-                </div>
-            </div>
-            <div id="team-carousel" class="carousel slide" data-interval="false">
-                <a class="member-left" href="#team-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                <a class="member-right" href="#team-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-                <div class="carousel-inner team-members">
-                    <div class="row item active">
-                        <div class="col-sm-6 col-md-3">
-                            <div class="single-member">
-                                <img src="{{ RAIZ }}web/images/our-team/member1.jpg" alt="team member" />
-                                <h4>William Hurt</h4>
-                                <h5>Sr. Web Developer</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-                                <div class="socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="single-member">
-                                <img src="{{ RAIZ }}web/images/our-team/member2.jpg" alt="team member" />
-                                <h4>Alekjandra Jony</h4>
-                                <h5>Creative Designer</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-                                <div class="socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="single-member">
-                                <img src="{{ RAIZ }}web/images/our-team/member3.jpg" alt="team member" />
-                                <h4>Paul Johnson</h4>
-                                <h5>Skilled Programmer</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-                                <div class="socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="single-member">
-                                <img src="{{ RAIZ }}web/images/our-team/member4.jpg" alt="team member" />
-                                <h4>John Richerds</h4>
-                                <h5>Marketing Officer</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-                                <div class="socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="col-sm-6 col-md-3">
-                            <div class="single-member">
-                                <img src="{{ RAIZ }}web/images/our-team/member1.jpg" alt="team member" />
-                                <h4>William Hurt</h4>
-                                <h5>Sr. Web Developer</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-                                <div class="socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="single-member">
-                                <img src="{{ RAIZ }}web/images/our-team/member3.jpg" alt="team member" />
-                                <h4>Paul Johnson</h4>
-                                <h5>Skilled Programmer</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-                                <div class="socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="single-member">
-                                <img src="{{ RAIZ }}web/images/our-team/member2.jpg" alt="team member" />
-                                <h4>Alekjandra Jony</h4>
-                                <h5>Creative Designer</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-                                <div class="socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="single-member">
-                                <img src="{{ RAIZ }}web/images/our-team/member4.jpg" alt="team member" />
-                                <h4>John Richerds</h4>
-                                <h5>Marketing Officer</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-                                <div class="socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!--/#Our-Team-->
 
     <section id="portfolio">
         <div class="container">
@@ -557,175 +420,6 @@
             </div>
         </div>
     </section><!--/#clients-->
-
-    <section id="blog">
-        <div class="container">
-            <div class="row text-center clearfix">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <h2 class="title-one">Our Blog</h2>
-                    <p class="blog-heading">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="single-blog">
-                        <img src="{{ RAIZ }}web/images/blog/1.jpg" alt="" />
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        <ul class="post-meta">
-                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-                        </ul>
-                        <div class="blog-content">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-detail">Read More</a>
-                    </div>
-                    <div class="modal fade" id="blog-detail" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <img src="{{ RAIZ }}web/images/blog/3.jpg" alt="" />
-                                    <h2>Lorem ipsum dolor sit amet</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-blog">
-                        <img src="{{ RAIZ }}web/images/blog/2.jpg" alt="" />
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        <ul class="post-meta">
-                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-                        </ul>
-                        <div class="blog-content">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-two">Read More</a>
-                    </div>
-                    <div class="modal fade" id="blog-two" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <img src="{{ RAIZ }}web/images/blog/2.jpg" alt="" />
-                                    <h2>Lorem ipsum dolor sit amet</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-blog">
-                        <img src="{{ RAIZ }}web/images/blog/3.jpg" alt="" />
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        <ul class="post-meta">
-                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-                        </ul>
-                        <div class="blog-content">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-three">Read More</a>
-                    </div>
-                    <div class="modal fade" id="blog-three" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <img src="{{ RAIZ }}web/images/blog/3.jpg" alt="" />
-                                    <h2>Lorem ipsum dolor sit amet</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-blog">
-                        <img src="{{ RAIZ }}web/images/blog/3.jpg" alt="" />
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        <ul class="post-meta">
-                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-                        </ul>
-                        <div class="blog-content">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-four">Read More</a></div>
-                    <div class="modal fade" id="blog-four" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <img src="{{ RAIZ }}web/images/blog/3.jpg" alt="" />
-                                    <h2>Lorem ipsum dolor sit amet</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-blog">
-                        <img src="{{ RAIZ }}web/images/blog/2.jpg" alt="" />
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        <ul class="post-meta">
-                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-                        </ul>
-                        <div class="blog-content">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-six">Read More</a>
-                    </div>
-                    <div class="modal fade" id="blog-six" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <img src="{{ RAIZ }}web/images/blog/2.jpg" alt="" />
-                                    <h2>Lorem ipsum dolor sit amet</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="single-blog">
-                        <img src="{{ RAIZ }}web/images/blog/1.jpg" alt="" />
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        <ul class="post-meta">
-                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-                        </ul>
-                        <div class="blog-content">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#blog-seven">Read More</a>
-                    </div>
-                    <div class="modal fade" id="blog-seven" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <img src="{{ RAIZ }}web/images/blog/1.jpg" alt="" />
-                                    <h2>Lorem ipsum dolor sit amet</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> <!--/#blog-->
 
     <section id="contact">
         <div class="container">
