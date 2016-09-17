@@ -7,7 +7,7 @@
             width: 160px;
         }
 
-        .carousel-caption div{
+        .bsvCor{
             color: #FFA400 !important;
         }
     </style>
@@ -46,29 +46,19 @@
                 <li data-target="#main-carousel" data-slide-to="2"></li>
             </ol><!--/.carousel-indicators-->
             <div class="carousel-inner">
-                <div class="item active" style="background-image: url({{ RAIZ }}web/images/slider/mountains2.jpg)">
-                    <div class="carousel-caption">
-                        <div>
-                            <h2 class="heading animated bounceInDown ">BSV Soluções</h2>
-                            <p class="animated bounceInUp">{{ SLOGAN }}</p>
-                            {#<a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a>#}
+                {% for bcr in carrossel %}
+                    <div class="item {% if bcr.bcrprincipal != 0 %}active{% endif %}" style="background-image: url({{ RAIZ }}{{ bcr.bcrimg }})">
+                        <div class="carousel-caption">
+                            <div>
+                                <h2 class="heading animated bounceInDown">{{ bcr.bcrtitulo }}</h2>
+                                <p class="animated bounceInUp">{{ bcr.bcrsubtitulo }}</p>
+                                {% if bcr.bcrtembotao != 0 %}
+                                    <a class="btn btn-default slider-btn animated fadeIn" href="javascript(alert('teste'))">{{ bcr.bcrtxtbotao }}</a>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item" style="background-image: url({{ RAIZ }}web/images/slider/mountains.jpg)">
-                    <div class="carousel-caption"> <div>
-                            <h2 class="heading animated bounceInDown">Get All in Onepage</h2>
-                            <p class="animated bounceInUp">Everything is outstanding </p> <a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url({{ RAIZ }}web/images/slider/praia.jpg)">
-                    <div class="carousel-caption"> <div>
-                            <h2 class="heading animated bounceInDown">Get All in Onepage</h2>
-                            <p class="animated bounceInUp">Everything is outstanding </p> <a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div><!--/.carousel-inner-->
 
             <a class="carousel-left member-carousel-control hidden-xs" href="#main-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
@@ -163,8 +153,8 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <h2 class="title-one">Services</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                    <h2 class="title-one">Serviços</h2>
+                    {#<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>#}
                 </div>
             </div>
             <div class="row">
@@ -173,25 +163,47 @@
                         <div class="services row">
                             <div class="col-sm-4">
                                 <div class="single-service">
-                                    <i class="fa fa-th"></i>
-                                    <h2>Modern Design</h2>
+                                    <i class="fa fa-sitemap"></i>
+                                    <h2>Consultoria de Rede</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="single-service">
-                                    <i class="fa fa-html5"></i>
-                                    <h2>Web Development</h2>
+                                    <i class="fa fa-wordpress"></i>
+                                    <h2>Sites</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy </p>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="single-service">
-                                    <i class="fa fa-users"></i>
-                                    <h2>Online Marketing</h2>
+                                    <i class="fa fa-html5"></i>
+                                    <h2>Sistemas WEB</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
                                 </div>
-                            </div></div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="single-service">
+                                    <i class="fa fa-users"></i>
+                                    <h2>Treinamento in company</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="single-service">
+                                    <i class="fa fa-google-plus-square"></i>
+                                    <h2>SEO</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="single-service">
+                                    <i class="fa fa-facebook-square"></i>
+                                    <h2>Redes sociais</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -208,162 +220,25 @@
             </div>
             <ul class="portfolio-filter text-center">
                 <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".html">Html</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Wordpress</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".joomla">Joomla</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".megento">Megento</a></li>
+                {% for cat in categoria %}
+                    <li><a class="btn btn-default" href="#" data-filter=".{{ cat.bpcvalor }}">{{ cat.bpcdsc }}</a></li>
+                {% endfor %}
             </ul><!--/#portfolio-filter-->
             <div class="portfolio-items">
-                <div class="col-sm-3 col-xs-12 portfolio-item html">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/1.jpg" alt=""></div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+                {% for port in portfolio %}
+                    <div class="col-sm-3 col-xs-12 portfolio-item {{ port.bpcvalor }}">
+                        <div class="view efffect">
+                            <div class="portfolio-image">
+                                <img src="{{ RAIZ }}{{ port.bpturl }}" alt=""></div>
+                            <div class="mask text-center">
+                                <h3>{{ port.bpttitulo }}</h3>
+                                <h4>{{ port.bptsubtitulo }}</h4>
+                                <a href="{{ port.bptlink }}" target="_blank"><i class="fa fa-link"></i></a>
+                                <a href="{{ RAIZ }}{{ port.bpturl }}" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item jooma">
-                    <div class="view efffect" >
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/2.jpg" alt="">
-                        </div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item4.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item wordpress">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/3.jpg" alt="">
-                        </div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item megento">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/4.jpg" alt="">
-                        </div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item html">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/5.jpg" alt="">
-                        </div> <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item wordpress">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/6.jpg" alt="">
-                        </div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item html">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/7.jpg" alt="">
-                        </div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item joomla">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/8.jpg" alt=""></div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item html">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/9.jpg" alt="">
-                        </div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item wordpress">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/10.jpg" alt=""></div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item joomla">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/11.jpg" alt=""></div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item3.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 portfolio-item megento">
-                    <div class="view efffect">
-                        <div class="portfolio-image">
-                            <img src="{{ RAIZ }}web/images/portfolio/12.jpg" alt=""></div>
-                        <div class="mask text-center">
-                            <h3>Novel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="{{ RAIZ }}web/images/portfolio/big-item4.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
 

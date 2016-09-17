@@ -37,10 +37,20 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 ));
 
 $app['twig']->addGlobal('RAIZ', '/bsvsolucoes/');
-$app['twig']->addGlobal('SLOGAN', 'Um mundo de soluções a seu favor!');
+$app['twig']->addGlobal('TITLE', 'BSV Soluções');
 
 $app->get('/', function() use($app){
-    return $app['twig']->render('pages/home.twig');
+    $sql = "select bcrimg, bcrtitulo, bcrprincipal, bcrsubtitulo, bcrtembotao, bcrtxtbotao, bcrfuncbotao from bsv_carrossel";
+    $bcr = $app['db']->fetchAll($sql);
+    $sql = "select bpcdsc, bpcvalor from bsv_portfolio_categoria";
+    $bpc = $app['db']->fetchAll($sql);
+    $sql = "select bpcvalor, bpturl, bpttitulo, bptsubtitulo, bptlink From bsv_portfolio bpt inner join bsv_portfolio_categoria bpc on bpc.bpcid = bpt.bpcid";
+    $bpt = $app['db']->fetchAll($sql);
+    return $app['twig']->render('pages/home.twig', array(
+        'carrossel' => $bcr,
+        'categoria' => $bpc,
+        'portfolio' => $bpt
+    ));
 });
 
 $app->get('email', function() use($app, $email){

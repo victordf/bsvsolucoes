@@ -612,7 +612,7 @@ h1, h2, h3, h4, h5, h6 {
 ======================*/
 
 #services {
-  background-image: url("../images/services/service-bg.jpg");
+  background-image: url("../images/asgard.jpg");
   color:#fff;
   text-align:center;
   background-color:	#0A0A13;
@@ -637,6 +637,7 @@ h1, h2, h3, h4, h5, h6 {
 	-moz-transition: all 0.9s ease 0s;
 	-webkit-transition: all 0.9s ease 0s;
 	-o-transition: all 0.9s ease 0s;
+	margin-bottom: 10px;
 }
 
 .single-service p {
@@ -954,7 +955,7 @@ h1, h2, h3, h4, h5, h6 {
 ======================*/
 
 #clients{
-	background-image: url("../images/clients/client-bg.jpg");
+	background-image: url("../images/nuvens-baixas.jpg");
 	background-color:#0A0A13;
 }
 
