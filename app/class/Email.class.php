@@ -93,8 +93,9 @@ class Email {
     public function send($assunto, $corpo){
         $this->mailer->Subject = $assunto;
         $this->mailer->Body = $corpo;
-
         if(!$this->mailer->send()){
+            var_dump($this->mailer->ErrorInfo);
+            die();
             $this->error = $this->mailer->ErrorInfo;
             return false;
         } else {

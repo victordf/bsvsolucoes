@@ -611,11 +611,24 @@ h1, h2, h3, h4, h5, h6 {
 ======Service CSS=====
 ======================*/
 
-#services {
-  background-image: url("../images/asgard.jpg");
-  color:#fff;
-  text-align:center;
-  background-color:	#0A0A13;
+/* Define a configuração geral da seção de serviços, para telas menores que 768px */
+@media (max-width: 768px) {
+	#services {
+		/*background-image: url("../images/praia-pordosol.jpg");*/
+		background-color: #BEAACF;
+		color:#fff;
+		text-align:center;
+		/*background-color:	#0A0A13;*/
+	}
+}
+
+@media (min-width: 768px) {
+	#services {
+		background-image: url("../images/praia-pordosol.jpg");
+		color: #fff;
+		text-align: center;
+		background-color: #0A0A13;
+	}
 }
 
 .services {
@@ -638,6 +651,7 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-transition: all 0.9s ease 0s;
 	-o-transition: all 0.9s ease 0s;
 	margin-bottom: 10px;
+	height: 400px;
 }
 
 .single-service p {
@@ -1192,7 +1206,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-details {	
-	padding-top:75px;
+	/*padding-top:75px;*/
+	padding-top: 0px;
 }
 
 .pattern {
